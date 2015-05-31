@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<!DOCTYPE greeter SYSTEM "greeter.dtd">
+
+<!-- GDM Theme: UbuntuHardy          -->
+<!-- Version 0.1                    -->
+
+<!-- Author: Jeremy Bank -->
+<!-- Email : jeremy@designerlinux.com  -->
+<!-- Date  : August 2008         -->
+
+
+<greeter>
+
+	<!-- background -->
+	<item type="pixmap">
+		<normal file="bg_blue.png"/>
+		<pos x="0" y="0" width="100%" height="100%"/>
+	</item>
+
+
+	<!-- login window container -->
+	<item type="rect">
+		<pos anchor="center" x="50%" y="50%" width="530" height="410"/>
+		<fixed>
+
+
+			<!-- login window pixmap -->
+			<item type="pixmap">
+				<normal file="window.png"/>
+				<pos anchor="center" x="50%" y="50%"/>
+			</item>
+	
+
+			<!-- Linux & hostname container -->
+			<item type="rect">
+				<pos anchor="n" x="50%" y="145"/>
+				<normal color="#ff0000"/>
+				
+				<box orientation="vertical">
+				
+					<!-- Linux label -->
+					<item type="label">
+						<pos anchor="n" x="50%"/>
+						<normal color="#000000" font="Ubuntu-Title 20"/>
+						<text>ubuntu</text>
+					</item>
+			
+					<!-- Hostname label -->
+					<item type="label">
+						<pos anchor="n" x="50%"/>
+						<normal color="#999999" font="MyriadPro-Regular 8"/>
+						<text>%h</text>
+					</item>
+				</box>
+			</item>
+
+
+			<!-- CAPS-LOCK warning -->
+			<item type="label" id="caps-lock-warning">
+				<pos anchor="n" x="50%" y="180"/>
+				<normal font="MyriadPro-Regular 8" color="#000000"/>
+				<stock type="caps-lock-warning"/>
+			</item>
+
+			
+			<!-- username/password label & entry container -->
+			<item type="rect">
+				<pos anchor="n" x="50%" y="250" height="box" width="box"/>
+
+				<box orientation="horizontal" spacing="10">
+
+					<!-- username/password label -->
+					<item type="label" id="pam-prompt">
+						<stock type="username-label"/>
+						<normal color="#000000" font="MyriadPro-Regular 10"/>
+					</item>
+
+					<!-- username/password entry -->
+					<item type="entry" id="user-pw-entry">
+						<normal color="#000000" font="MyriadPro-Regular 10"/>
+						<pos width="130" height="21"/>
+					</item>
+				</box>
+			</item>
+
+
+			<!-- error messages -->
+			<item type="label" id="pam-error">
+				<pos anchor="n" x="50%" y="200"/>
+				<normal font="MyriadPro-Regular" color="#000000"/>
+				<text></text>
+			</item>
+
+
+			<!-- button container -->
+			<item type="rect">
+				<pos x="50%" y="360" anchor="s" width="box" height="box"/>
+
+				<box orientation="horizontal" spacing="10">
+	
+					<!-- session button -->
+					<item type="rect" id="session_button" button="true">
+						<pos anchor="nw" width="70" height="70"/>
+						
+						<box orientation="vertical" spacing="5">
+		
+							<!-- button image -->
+							<item type="pixmap">
+								<normal file="button.png"/>
+								<active file="button_pressed.png"/>
+								<pos x="50%" anchor="n"/>
+							</item>
+
+							<!-- button text-label -->
+							<item type="label">
+								<pos x="50%" anchor="n"/>
+								<normal font="MyriadPro-Regular 8" color="#000000"/>
+								<stock type="session"/>
+							</item>
+						</box>
+					</item>
+
+
+					<!-- reboot button -->
+					<item type="rect" id="reboot_button" button="true">
+						<pos anchor="nw" width="70" height="70"/>
+						
+						<box orientation="vertical" spacing="5">
+		
+							<!-- button image -->
+							<item type="pixmap">
+								<normal file="button.png"/>
+								<active file="button_pressed.png"/>
+								<pos x="50%" anchor="n"/>
+							</item>
+
+							<!-- button text-label -->
+							<item type="label">
+								<pos x="50%" anchor="n"/>
+								<normal font="MyriadPro-Regular 8" color="#000000"/>
+								<stock type="reboot"/>
+							</item>
+						</box>
+					</item>
+
+
+					<!-- halt button -->
+					<item type="rect" id="halt_button" button="true">
+						<pos anchor="nw" width="70" height="70"/>
+						
+						<box orientation="vertical" spacing="5">
+		
+							<!-- button image -->
+							<item type="pixmap">
+								<normal file="button.png"/>
+								<active file="button_pressed.png"/>
+								<pos x="50%" anchor="n"/>
+							</item>
+
+							<!-- button text-label -->
+							<item type="label">
+								<pos x="50%" anchor="n"/>
+								<normal font="MyriadPro-Regular 8" color="#000000"/>
+								<stock type="halt"/>
+							</item>
+						</box>
+					</item>
+				</box>
+			</item> 
+		</fixed>
+	</item>
+</greeter>

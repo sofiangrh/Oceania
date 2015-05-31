@@ -1,0 +1,14 @@
+# This is not really a .desktop file like the rest, but it's useful to treat
+# it as such
+
+[MdmGreeterTheme]
+Encoding=UTF-8
+Greeter=Oceania.xml
+Name=Oceania-ver-1.0
+Description=Simple blue theme for Ubuntu Linux
+Author=Jeremy Bank - webpage: jeremybank.com
+Copyright=GPL
+Screenshot=screenshot.png
+
+[Desktop Entry]
+Name[bg_BG]=MdmGreeterTheme
